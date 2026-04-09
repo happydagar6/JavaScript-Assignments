@@ -267,58 +267,59 @@
 // });
 
 
-let initialScore = { red: 0, blue: 0, green: 0, yellow: 0 };
+// let initialScore = { red: 0, blue: 0, green: 0, yellow: 0 };
 
-function OpeningCeremony(score, raceEvent, longJumpEvent, highJumpEvent, awardEvent) {
-    console.log("1. Sports Day has started!");
+// function OpeningCeremony(score, raceEvent, longJumpEvent, highJumpEvent, awardEvent) {
+//     console.log("1. Sports Day has started!");
 
-    setTimeout(() => {
-        console.log("2. Opening Ceremony Completed! Score:", score);
-        raceEvent(score, longJumpEvent, highJumpEvent, awardEvent);
-    }, 3000); // Simulating a 3-second delay
-}
+//     setTimeout(() => {
+//         console.log("2. Opening Ceremony Completed! Score:", score);
+//         raceEvent(score, longJumpEvent, highJumpEvent, awardEvent);
+//     }, 3000); // Simulating a 3-second delay
+// }
 
-function Race100M(score, longJumpEvent, highJumpEvent, awardEvent) {
-    console.log("\n 2. Start the Race 100M!");
+// function Race100M(score, longJumpEvent, highJumpEvent, awardEvent) {
+//     console.log("\n 2. Start the Race 100M!");
 
-    setTimeout(() => {
-        score.red += 50;
-        console.log("Race has ended! Red team gets 50 points. Score:", score);
-        longJumpEvent(score, highJumpEvent, awardEvent);
-    }, 2000); // Simulating a 2-second delay
-}
+//     setTimeout(() => {
+//         score.red += 50;
+//         console.log("Race has ended! Red team gets 50 points. Score:", score);
+//         longJumpEvent(score, highJumpEvent, awardEvent);
+//     }, 2000); // Simulating a 2-second delay
+// }
 
-function LongJump(score, highJumpEvent, awardEvent) {
-    console.log("\n 3. Start the Long Jump!");
+// function LongJump(score, highJumpEvent, awardEvent) {
+//     console.log("\n 3. Start the Long Jump!");
 
-    setTimeout(() => {
-        score.blue += 150;
-        console.log("Long Jump has ended! Blue team gets 150 points. Score:", score);
-        highJumpEvent(score, awardEvent);
-    }, 2000); // Simulating a 2-second delay
-}
+//     setTimeout(() => {
+//         score.blue += 150;
+//         console.log("Long Jump has ended! Blue team gets 150 points. Score:", score);
+//         highJumpEvent(score, awardEvent);
+//     }, 2000); // Simulating a 2-second delay
+// }
 
-function HighJump(score, awardEvent) {
-    console.log("\n 4. Start the High Jump!");
+// function HighJump(score, awardEvent) {
+//     console.log("\n 4. Start the High Jump!");
 
-    let winner = prompt("High Jump: Which team won? (red/blue/green/yellow)");
+//     let winner = prompt("High Jump: Which team won? (red/blue/green/yellow)");
 
-    if (winner === "red" || winner === "blue" || winner === "green" || winner === "yellow") {
-        score[winner] += 100;
-        console.log(`High Jump has ended! ${winner} team gets 100 points. Score:`, score);
-    } else {
-        console.log("Invalid input for High Jump winner. No points awarded.");
-    }
-    console.log("Score:", score);
-    awardEvent(score);
-};
+//     if (winner === "red" || winner === "blue" || winner === "green" || winner === "yellow") {
+//         score[winner] += 100;
+//         console.log(`High Jump has ended! ${winner} team gets 100 points. Score:`, score);
+//     } else {
+//         console.log("Invalid input for High Jump winner. No points awarded.");
+//     }
+//     console.log("Score:", score);
+//     awardEvent(score);
+// };
+
+// function AwardCeremony(score) {
+//     console.log("\n 5. Award Ceremony!");
+//     console.log("Final Score:", score);
+//     console.log("Congratulations to all the teams for their participation!");
+// };
+
+// // Start the Sports Day Event
+// OpeningCeremony(initialScore, Race100M, LongJump, HighJump, AwardCeremony);
 
 
-function AwardCeremony(score) {
-    console.log("\n 5. Award Ceremony!");
-    console.log("Final Score:", score);
-    console.log("Congratulations to all the teams for their participation!");
-};
-
-// Start the Sports Day Event
-OpeningCeremony(initialScore, Race100M, LongJump, HighJump, AwardCeremony);
