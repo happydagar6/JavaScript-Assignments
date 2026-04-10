@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Todo LocalStorage</title>
+    <title>Shopping Cart Application With CRUD Operations (Only pure JS no react)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h2>To-Do List</h2>
     
-    <form id="form">
-        <input type="text" id="name" placeholder="Item Name" required>
-        <input type="date" id="date" required>
-        <select id="priority" required>
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
-        </select>
-        <button type="submit">Add</button>
-    </form>
+    <div class="container">
+        <h2>Shopping Cart Application With CRUD Operations</h2>
+        <div class="form-container">
+            <input type="text" id="itemName" placeholder="Item Name">
+            <input type="number" id="itemPrice" placeholder="Item Price">
+            <input type="number" id="itemQuantity" placeholder="Item Quantity">
+            <button id="addItemBtn">Add Item</button>
+        </div>
 
-    <h3>Today's Tasks</h3>
-    <div id="today"></div>
+        <div class="cart-container">
+            <h3>Shopping Cart</h3>
+            <ul id="cartItems"></ul>
+        </div>
 
-    <h3>Future Tasks</h3>
-    <div id="future"></div>
+        <div class="total-container">
+            <h3>Total: $<span id="totalAmount">0.00</span></h3>
+        </div>
+    </div>
 
-    <h3>Completed Tasks</h3>
-    <div id="completed"></div>
 
-    <script src="TodoList.js"></script>
+<script src="ShoppingCart.js"></script>
 </body>
 </html>
