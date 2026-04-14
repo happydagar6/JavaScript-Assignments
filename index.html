@@ -3,31 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart Application With CRUD Operations (Only pure JS no react)</title>
+    <title>Signup - UI Design</title>
+    <meta name="description" content="A responsive, dark-themed signup form with client-side validation.">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    
     <link rel="stylesheet" href="style.css">
+    
+    <script src="Assignment.js" defer></script>
 </head>
 <body>
-    
-    <div class="container">
-        <h2>Shopping Cart Application With CRUD Operations</h2>
-        <div class="form-container">
-            <input type="text" id="itemName" placeholder="Item Name">
-            <input type="number" id="itemPrice" placeholder="Item Price">
-            <input type="number" id="itemQuantity" placeholder="Item Quantity">
-            <button id="addItemBtn">Add Item</button>
-        </div>
 
-        <div class="cart-container">
-            <h3>Shopping Cart</h3>
-            <ul id="cartItems"></ul>
-        </div>
+    <header>
+        <h1 style="display:none;">User Registration Portal</h1>
+    </header>
 
-        <div class="total-container">
-            <h3>Total: $<span id="totalAmount">0.00</span></h3>
-        </div>
-    </div>
+    <main class="form-container">
+        <form id="registrationForm" data-cy="signup-form" novalidate>
+            <h2>Signup</h2>
 
+            <div class="input-group">
+                <input type="text" id="fullName" placeholder="Full Name" required data-cy="fullname-input">
+            </div>
 
-<script src="ShoppingCart.js"></script>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required data-cy="email-input">
+                <span class="error-message" id="emailError" data-cy="email-error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" minlength="8" required data-cy="password-input">
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required data-cy="confirm-password-input">
+                <span class="error-message" id="passwordError" data-cy="password-error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="dob" placeholder="MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}" required data-cy="dob-input">
+                <span class="error-message" id="dobError" data-cy="dob-error"></span>
+            </div>
+
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="role" value="Student" required data-cy="radio-student"> Student
+                </label>
+                <label>
+                    <input type="radio" name="role" value="Employee" required data-cy="radio-employee"> Employee
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="terms" required data-cy="checkbox-terms"> 
+                    I agree to all the Terms and conditions
+                </label>
+            </div>
+
+            <button type="submit" data-cy="submit-btn">Signup</button>
+
+            <div id="successMessage" class="success-feedback" data-cy="success-message">
+                Registration Successful! Data has been submitted.
+            </div>
+        </form>
+    </main>
+
 </body>
 </html>

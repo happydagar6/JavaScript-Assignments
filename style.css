@@ -1,35 +1,119 @@
-body { 
-    font-family: sans-serif; 
-    padding: 20px; 
-    max-width: 600px; 
-    margin: auto; 
+/* Base Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-.container {
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* Layout */
 .form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     width: 100%;
+    max-width: 450px;
+    background: transparent;
+    padding: 20px;
 }
 
-.cart-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
-.total-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* Input Styling */
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #444;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #888;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-bottom: 1px solid #fff;
+}
+
+/* Error Text */
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+    height: 15px;
+}
+
+/* Radios and Checkbox */
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.checkbox-group {
+    margin-bottom: 30px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Submit Button */
+button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Success Feedback */
+.success-feedback {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1a4d1a;
+    color: #4dff4d;
+    border-radius: 4px;
+    display: none; 
 }
