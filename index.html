@@ -3,70 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup - UI Design</title>
-    <meta name="description" content="A responsive, dark-themed signup form with client-side validation.">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    
+    <title>Counter using HTML</title>
     <link rel="stylesheet" href="style.css">
-    
-    <script src="Assignment.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <h1>Counter using HTML</h1>
+        
+        <p class="count-text">Your Current Count is : <span id="count">0</span></p>
+        
+        <p id="error-msg" class="error-text" style="display: none;">Error : Cannot go below 0</p>
+        
+        <div class="button-group">
+            <button id="decrement-btn" class="btn btn-light">Decrement</button>
+            <button id="increment-btn" class="btn btn-light">Increment</button>
+            <button id="clear-btn" class="btn btn-dark" style="display: none;">Clear</button>
+        </div>
+    </div>
 
-    <header>
-        <h1 style="display:none;">User Registration Portal</h1>
-    </header>
-
-    <main class="form-container">
-        <form id="registrationForm" data-cy="signup-form" novalidate>
-            <h2>Signup</h2>
-
-            <div class="input-group">
-                <input type="text" id="fullName" placeholder="Full Name" required data-cy="fullname-input">
-            </div>
-
-            <div class="input-group">
-                <input type="email" id="email" placeholder="Email" required data-cy="email-input">
-                <span class="error-message" id="emailError" data-cy="email-error"></span>
-            </div>
-
-            <div class="input-group">
-                <input type="password" id="password" placeholder="Password" minlength="8" required data-cy="password-input">
-            </div>
-
-            <div class="input-group">
-                <input type="password" id="confirmPassword" placeholder="Confirm Password" required data-cy="confirm-password-input">
-                <span class="error-message" id="passwordError" data-cy="password-error"></span>
-            </div>
-
-            <div class="input-group">
-                <input type="text" id="dob" placeholder="MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}" required data-cy="dob-input">
-                <span class="error-message" id="dobError" data-cy="dob-error"></span>
-            </div>
-
-            <div class="radio-group">
-                <label>
-                    <input type="radio" name="role" value="Student" required data-cy="radio-student"> Student
-                </label>
-                <label>
-                    <input type="radio" name="role" value="Employee" required data-cy="radio-employee"> Employee
-                </label>
-            </div>
-
-            <div class="checkbox-group">
-                <label>
-                    <input type="checkbox" id="terms" required data-cy="checkbox-terms"> 
-                    I agree to all the Terms and conditions
-                </label>
-            </div>
-
-            <button type="submit" data-cy="submit-btn">Signup</button>
-
-            <div id="successMessage" class="success-feedback" data-cy="success-message">
-                Registration Successful! Data has been submitted.
-            </div>
-        </form>
-    </main>
-
+    <script src="script.js"></script>
 </body>
 </html>
